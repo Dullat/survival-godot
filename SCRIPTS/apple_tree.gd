@@ -46,5 +46,5 @@ func _drop_apple():
 	var apple_instance = apple.instantiate()
 	apple_instance.global_position = $Marker2D.global_position
 	get_parent().add_child(apple_instance)
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(8).timeout
 	$growth_timer.start()

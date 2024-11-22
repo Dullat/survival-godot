@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7y8vpg1eviur"]
+
+[ext_resource type="PackedScene" uid="uid://8g00ro3o2nro" path="res://cpu_particles_2d.tscn" id="1_kfjxp"]
+
+[sub_resource type="Environment" id="Environment_ysvtj"]
+background_mode = 5
+glow_enabled = true
+glow_intensity = 3.66
+glow_strength = 2.0
+glow_bloom = 0.01
+glow_blend_mode = 0
+glow_hdr_threshold = 4.0
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 95.54
+
+[node name="blast" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ysvtj")
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("1_kfjxp")]
+emitting = true
+one_shot = false

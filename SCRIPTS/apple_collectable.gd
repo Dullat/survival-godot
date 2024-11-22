@@ -8,7 +8,7 @@ func _ready() -> void:
 func _physics_process(delta):
 	var player = get_parent().get_node("player")
 	position += (player.position - position)/10
-	look_at(player.position)
+	#look_at(player.position)
 	move_and_collide(motion)
 	await get_tree().create_timer(1).timeout
 	$AnimationPlayer.stop()
